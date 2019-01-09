@@ -1,9 +1,17 @@
 #A Domain Model is an abstract representation of the Objects within a system
 class DockingStation
+  attr_reader :bike
   def release_bike
-    # Bike.new
+    Bike.new
   end
 
+  def dock (bike)
+    @bike = bike
+  end
+
+  # def bike
+  #   @bike
+  # end
 end
 
 # docking_station = DockingStation.new

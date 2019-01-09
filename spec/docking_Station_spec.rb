@@ -13,8 +13,19 @@ describe DockingStation do
 
   it "bike is working" do
     expect(subject.release_bike.working?). to be true
-  end 
-end
+  end
 
+  it "docks something" do
+    bike = Bike.new
+    expect(subject.dock(bike)).to eq bike
+  end
+  # it { is_expected.to respond_to(:dock).with(1)}
+  it "returns docked bikes" do
+    bike = Bike.new
+    subject.dock(bike)
+    expect(subject.bike).to eq bike
+  end
+  # it { is_expected.to respond_to(:bike)}
+end
 # gets a bike
 # subject == dockingstation in this example as good practice within ruby. Dockingstation is a class and subject makes an instance
