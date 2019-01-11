@@ -1,4 +1,5 @@
-#A Domain Model is an abstract representation of the Objects within a system
+require_relative './lib/bike.rb'
+
 class DockingStation
 
   attr_reader :bike
@@ -6,22 +7,14 @@ class DockingStation
   def release_bike
     fail 'No bikes available' unless @bike
     @bike
-    #docking station is empty
-    # if @bike == nil
-    #   fail
-    # else
-    #   Bike.new
-    # end
   end
 
-  def dock (bike)
-    @bike = bike
-  end
+  def dock(bike)
+   fail 'Docking station full' if @bike
+   @bike = bike
+ end
+end 
 
-  # def bike
-  #   @bike
-  # end
-end
 
 # docking_station = DockingStation.new
 #
