@@ -34,6 +34,13 @@ describe DockingStation do
     end
   end
 
+  describe 'capacity' do
+    it 'can set capacity of docking station' do
+      expect { DockingStation.new(20) }.to_not raise_error
+   end
+  end
+      
+
  end
 
   # it "no infinite bikes" do
