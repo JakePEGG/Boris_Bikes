@@ -40,6 +40,11 @@ describe DockingStation do
    end
   end
       
+  describe 'default capacity' do
+   it 'should equal 20' do
+      expect( subject.capacity ).to eq 20
+   end
+  end
 
  end
 
