@@ -42,7 +42,7 @@ describe DockingStation do
       
   describe 'default capacity' do
    it 'should equal 20' do
-      expect( subject.capacity ).to eq 20
+      expect( subject.capacity ).to eq DockingStation::DEFAULT_CAPACITY
    end
   end
 
