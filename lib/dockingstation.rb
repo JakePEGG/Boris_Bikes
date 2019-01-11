@@ -16,7 +16,9 @@ class DockingStation
    fail 'Docking station full' if full?
    @bikes << bike
    end
+  
 
+  private
   def full?
    @bikes.count >= 20 
   end
